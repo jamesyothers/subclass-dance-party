@@ -28,6 +28,8 @@ $(document).ready(function(){
       Math.random() * 1000
     );
 
+    window.dancers.push(dancer);
+
     $('body').append(dancer.$node);
   });
 });

@@ -11,7 +11,7 @@ var BlinkyDancer = function(top, left, timeBetweenSteps){
   //var blinkyDancer = new makeDancer(top, left, timeBetweenSteps);
   // this.oldStep = makeDancer.prototype.step;
   Dancer.call(this,top,left,timeBetweenSteps);
-
+  $(this.$node).addClass('blinky');
   //this._timeBetweenSteps = timeBetweenSteps;
   // return blinkyDancer;
 

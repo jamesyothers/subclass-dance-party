@@ -26,8 +26,32 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.blinky {
+/*  -ms-transform: translate(200px,200px);
+  -webkit-transform: translate(200px,200px);
+  transform: translate(200px,200px);*/
+  border:25px dotted yellow;
+}
+
 .big {
-  border:50px solid blue;
+  border:50px dotted blue;
+  border-radius:0px;
+  position:absolute;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  -animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.monk {
+  border:50px solid green;
   border-radius:50px;
   position:absolute;
+
+  transform:scale(4, 4);
+  -ms-transform:scale(4, 4);
+  -webkit-transform:scale(4, 4);
 }

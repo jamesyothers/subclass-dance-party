@@ -1,4 +1,4 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps){
+var BlinkyDancer = function(top, left, timeBetweenSteps){
   //var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
   //this.prototype = Object.create(makeDancer.prototype);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -10,25 +10,20 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   //this.$node = $('<span class ="dancer blinky"></span>');
   //var blinkyDancer = new makeDancer(top, left, timeBetweenSteps);
   // this.oldStep = makeDancer.prototype.step;
-  makeDancer.call(this, top,left,timeBetweenSteps);
+  Dancer.call(this,top,left,timeBetweenSteps);
 
-  //debugger;
   //this._timeBetweenSteps = timeBetweenSteps;
   // return blinkyDancer;
 
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+BlinkyDancer.prototype = Object.create(Dancer.prototype);
+BlinkyDancer.prototype.constructor = BlinkyDancer;
 
-makeBlinkyDancer.prototype.step = function(){
+BlinkyDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
-  //console.log("Inside makeBlinkyDancer");
-  makeDancer.prototype.step.call(this);
-  //debugger;
-  //debugger;
-  //conslole.log
-  //debugger;
+  //console.log("Inside BlinkyDancer");
+  Dancer.prototype.step.call(this);
 
   // this.oldStep();
   // makeDancer.prototype.step();
@@ -43,7 +38,7 @@ makeBlinkyDancer.prototype.step = function(){
 
 
 
-// var makeBlinkyDancer = function(top, left, timeBetweenSteps){
+// var BlinkyDancer = function(top, left, timeBetweenSteps){
 //   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 
 //   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,

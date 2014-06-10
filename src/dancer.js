@@ -34,7 +34,18 @@ Dancer.prototype.setPosition = function(top, left){
   // this.setPosition(top, left);
 };
 
+Dancer.prototype.lineUp = function() {
+  var bottomRow = 500;
+  var lineUpPosition = 50;
 
+  for (var i = 0, l = window.dancers.length; i < l; i += 1) {
+    // console.log(window.dancers[i]);
+    window.dancers[i].setPosition(bottomRow,lineUpPosition);
+    lineUpPosition += 50;
+    console.log(lineUpPosition);
+  }
+
+};
 
 
 

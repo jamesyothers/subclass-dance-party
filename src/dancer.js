@@ -35,7 +35,7 @@ Dancer.prototype.setPosition = function(top, left){
 };
 
 Dancer.prototype.lineUp = function() {
-  var bottomRow = 500;
+  var bottomRow = 350;
   var lineUpPosition = 50;
 
   for (var i = 0, l = window.dancers.length; i < l; i += 1) {

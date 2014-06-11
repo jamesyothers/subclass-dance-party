@@ -31,6 +31,10 @@ $(document).ready(function(){
     window.dancers.push(dancer);
 
     $('body').append(dancer.$node);
+
+    $(".dancer").on("mouseover", function(event){
+      Dancer.prototype.jump();
+    });
   });
 
   $(".lineUpButton").on("click", function(event){
@@ -39,10 +43,5 @@ $(document).ready(function(){
 
   $(".interactButton").on("click", function(event){
     Dancer.prototype.interact();
-  });
-
-  $("span").on("mouseover", function(event){
-    return console.log("YOOOOOjkhgjkhjhkgjgO!");
-    Dancer.prototype.jump();
   });
 });

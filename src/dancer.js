@@ -7,7 +7,7 @@ var Dancer = function(top, left, timeBetweenSteps){
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
-    //</span><span class="hidden"></span>');
+  //</span><span class="hidden"></span>');
 
   this.step();
   this.setPosition(top,left);
@@ -52,20 +52,22 @@ Dancer.prototype.lineUp = function() {
 
 Dancer.prototype.interact = function () {
   for (var i = 0, l = window.dancers.length; i < l; i += 1) {
-    for (var j = 0; j < l; j++) {
-      var height = (window.dancers[i]._top - window.dancers[i+1]._top);
-      var width = (window.dancers[i]._left - window.dancers[i+1]._left);
+    for (var j = i + 1; j < l; j++) {
+      var height = (window.dancers[i]._top - window.dancers[j]._top);
+      var width = (window.dancers[i]._left - window.dancers[j]._left);
+      var dist = Math.sqrt(height*height + width*width);
     }
   }
 };
 
 Dancer.prototype.jump = function () {
-  console.log('jump');
+  console.dir(this._top);
+  console.dir(this._left);
+
   this._top = this._top + 100;
   this._left = this._left + 100;
 
-  this.setPosition(this._top, this._left);
-
+  this.setPosition.call(this, this._top, this._left);
 };
 
 

@@ -17,7 +17,7 @@ body, a:link, a:visited, a:active{
   color: lightblue;
 }
 
-.lineUpButton {
+.lineUpButton, .interactButton{
   padding:5px 12px;
   float:left;
 }

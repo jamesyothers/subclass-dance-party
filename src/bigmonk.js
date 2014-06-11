@@ -2,6 +2,7 @@ var BigMonk = function(top, left, timeBetweenSteps){
 
   BigDancer.call(this,top,left,timeBetweenSteps);
   $(this.$node).addClass('monk');
+  //.prepend('<img id="monkImg" src="http://th08.deviantart.net/fs71/PRE/i/2012/180/d/0/monk_transparent_by_oreo_septim-d55bc4t.png" />');
 };
 
 BigMonk.prototype = Object.create(BigDancer.prototype);

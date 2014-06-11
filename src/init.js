@@ -35,8 +35,9 @@ $(document).ready(function(){
 
   $(".lineUpButton").on("click", function(event){
     Dancer.prototype.lineUp();
-
   });
 
+  $(".interactButton").on("click", function(event){
+    Dancer.prototype.interact();
+  });
 });
-

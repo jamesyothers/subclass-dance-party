@@ -60,8 +60,8 @@ body, a:link, a:visited, a:active{
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .monk {
-  border:50px solid green;
-  border-radius:50px;
+  border: none;
+  border-radius:2px;
   position:absolute;
 
   transform:scale(4, 4);

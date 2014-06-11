@@ -1,10 +1,13 @@
 // Creates and returns a new dancer object that can step
 var Dancer = function(top, left, timeBetweenSteps){
+  this._top = top;
+  this._left = left;
 
   this._timeBetweenSteps = timeBetweenSteps;
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
+    //</span><span class="hidden"></span>');
 
   this.step();
   this.setPosition(top,left);
@@ -49,12 +52,22 @@ Dancer.prototype.lineUp = function() {
 
 Dancer.prototype.interact = function () {
   for (var i = 0, l = window.dancers.length; i < l; i += 1) {
-
-    console.log("top: " + window.dancers[i].$node.position().top);
-    console.log("left: " + window.dancers[i].$node.position().left);
-
+    for (var j = 0; j < l; j++) {
+      var height = (window.dancers[i]._top - window.dancers[i+1]._top);
+      var width = (window.dancers[i]._left - window.dancers[i+1]._left);
+    }
   }
 };
+
+Dancer.prototype.jump = function () {
+  console.log('jump');
+  this._top = this._top + 100;
+  this._left = this._left + 100;
+
+  this.setPosition(this._top, this._left);
+
+};
+
 
 
 

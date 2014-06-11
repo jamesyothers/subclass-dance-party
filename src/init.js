@@ -40,4 +40,9 @@ $(document).ready(function(){
   $(".interactButton").on("click", function(event){
     Dancer.prototype.interact();
   });
+
+  $("span").on("mouseover", function(event){
+    return console.log("YOOOOOjkhgjkhjhkgjgO!");
+    Dancer.prototype.jump();
+  });
 });

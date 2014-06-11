@@ -23,8 +23,12 @@ describe("blinkyDancer", function() {
 
   describe("dance", function(){
     it("should call step at least once per second", function(){
+      //sinon creates stand-in object (a copy of blikyDancer object)
+      //it will be able to track this object and determine such things
+      //as number of times called
       sinon.spy(blinkyDancer, "step");
       expect(blinkyDancer.step.callCount).to.be.equal(0);
+      //can comment out extra tick b/c compensated for by anonymous function in setTimeout of Dancer
       // clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
 

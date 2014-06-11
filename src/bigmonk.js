@@ -1,6 +1,7 @@
 var BigMonk = function(top, left, timeBetweenSteps){
 
   BigDancer.call(this,top,left,timeBetweenSteps);
+  //add class monk and make the image the image linked
   $(this.$node).addClass('monk').prepend('<img id="monkImg" src="http://th08.deviantart.net/fs71/PRE/i/2012/180/d/0/monk_transparent_by_oreo_septim-d55bc4t.png" height="53" width="37"/>');
 };
 
